@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: blue;
+            text-align: center;
+            font-size: 28px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 8px;
+        }
+        th {
+            width: 30%;
+            text-align: left;
+            font-weight: normal;
+        }
+        input[type="text"], 
+        input[type="email"], 
+        input[type="password"],
+        input[type="number"],
+        select {
+            width: 95%;
+            padding: 5px;
+        }
+        textarea {
+            width: 95%;
+            height: 80px;
+        }
+        .radio-options {
+            display: flex;
+            gap: 20px;
+        }
+        .checkbox-container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-right: 10px;
+        }
+        .declaration-row {
+            position: relative;
+        }
+        .declaration {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .login-link {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+        .submit-button {
+            margin-top: 15px;
+            text-align: center;
+        }
+        .submit-button input {
+            padding: 5px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration form</h1>
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <th>First Name</th>
+                <td><input type="text" name="firstname" required></td>
+            </tr>
+            <tr>
+                <th>Last Name</th>
+                <td><input type="text" name="lastname" required></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td><input type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <th>Re-enter Password</th>
+                <td><input type="password" name="repassword" required></td>
+            </tr>
+            <tr>
+                <th>Gender:</th>
+                <td>
+                    <div class="radio-options">
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>Age:</th>
+                <td><input type="number" name="age" min="1" max="120"></td>
+            </tr>
+            <tr>
+                <th>Phone Number</th>
+                <td><input type="text" name="phone"></td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td><textarea name="address"></textarea></td>
+            </tr>
+            <tr>
+                <th>State</th>
+                <td><input type="text" name="state"></td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td>
+                    <select name="country">
+                        <option value="">Choose your country</option>
+                        <option value="india">India</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Languages known</th>
+                <td>
+                    <div class="checkbox-container">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="english" name="languages" value="english">
+                            <label for="english">English</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="kannada" name="languages" value="kannada">
+                            <label for="kannada">Kannada</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="hindi" name="languages" value="hindi">
+                            <label for="hindi">Hindi</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="telugu" name="languages" value="telugu">
+                            <label for="telugu">Telugu</label>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="declaration-row">
+                <td colspan="2">
+                    <div class="declaration">
+                        <input type="checkbox" id="declaration" name="declaration" checked required>
+                        <label for="declaration">Hereby I declare all the given details are true</label>
+                    </div>
+                    <div class="login-link">
+                        Log in to <a href="https://ethnus.com">Ethnus</a> website
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="submit-button">
+            <input type="submit" value="Register">
+        </div>
+    </form>
+</body>
+</html>
